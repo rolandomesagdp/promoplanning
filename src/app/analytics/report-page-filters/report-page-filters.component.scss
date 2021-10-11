@@ -1,0 +1,38 @@
+@import '../../../themes/pp-variables.base.scss';
+
+.filters-toolbar {
+  margin-top: 2%;
+}
+
+.mat-toolbar {
+  background: $base-bg;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-raised-button {
+  background-color: $accent-color;
+  color: $base-bg;
+}
+
+.mat-raised-button:hover {
+  background-color: $accent-darker-color;
+}
+
+.mat-raised-button ::ng-deep .mat-button-focus-overlay {
+  display: none;
+}
+
+.mat-icon.mat-icon-inline {
+  font-size: large;
+}
+
+.side-pane-apply-button {
+  margin-right: 5%;
+}
+
+.filters-container {
+  margin-top: 10%
+}

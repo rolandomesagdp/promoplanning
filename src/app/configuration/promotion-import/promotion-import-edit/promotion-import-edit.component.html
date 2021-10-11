@@ -1,0 +1,26 @@
+<div *ngIf="importTypeConfig">
+
+    <button class="close" mat-dialog-close>&times;</button>
+    <h5 mat-dialog-title>{{ importTypeConfig.description }}</h5>
+
+    <div mat-dialog-content [formGroup]="promotionImportForm.importTypeForm">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="header"><span class="blue">Database name:</span><br> {{ importTypeConfig.sourceDB }}</p>
+                <p class="header"><span class="blue">Table name:</span><br> {{ importTypeConfig.sourceTable }}</p>
+            </div>
+            <div class="col-md-6">
+                <mat-radio-group formControlName="importType">
+                    <mat-radio-button color='primary' *ngFor='let checkbox of checkboxOptions' [value]="checkbox.value">{{ checkbox.title }}</mat-radio-button>
+                </mat-radio-group>
+                <mat-error *ngIf="promotionImportForm.importType.errors?.invalid">Please select atleast one option</mat-error>
+            </div>
+        </div>
+    </div>
+
+    <div mat-dialog-actions align="end">
+        <button mat-raised-button class="btn-blue" [disabled]="promotionImportForm.importType.invalid" (click)="importTable()">Import</button>
+        <button mat-raised-button class="btn-blue" [disabled]="promotionImportForm.importType.invalid" (click)="saveImportData()">Save</button>
+    </div>
+
+</div>

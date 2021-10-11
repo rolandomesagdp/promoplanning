@@ -1,0 +1,28 @@
+@import "../../../themes/pp-variables.base.scss";
+
+.pp-tool-bar {
+  height: 100%;
+  // background: rgb(4,59,127);
+  background: linear-gradient(90deg, #043B7F 0%, #043B7F 45%, $pp-blue 100%);
+  color: $pp-blue;
+}
+
+.pp-tool-bar.mat-toolbar-single-row {
+  padding-left: 10px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.logo-img {
+  width: 170px;
+  cursor: pointer;
+  margin-top: 7%;
+  margin-left: 6%;
+}
+
+.user-menu-container {
+  margin-right: 4%;
+  margin-top: .5%;
+}

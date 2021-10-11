@@ -1,0 +1,22 @@
+@import "../../../../themes/pp-variables.base.scss";
+
+.error-header {
+    color: $warn-color;
+}
+
+.error-message-card {
+    min-height: 30vh;
+}
+
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.error-message {
+    color: $warn-color;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-left: 15px;
+}

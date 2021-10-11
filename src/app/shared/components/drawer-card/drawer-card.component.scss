@@ -1,0 +1,41 @@
+@import '../../../../themes/pp-variables.base.scss';
+.main-container {
+  width: 100%;
+}
+
+.side-pane {
+  min-width: 30%;
+}
+
+.side-pane-container {
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
+.main-pane {
+  min-height: $content-card-min-height;
+}
+
+.mat-icon-button.toggle-button {
+  
+  position: absolute;
+  right: 0;
+  margin-right: 1%;
+}
+.mat-icon-button:hover {
+  background-color: $base-button-hover-color;
+}
+.mat-icon-button ::ng-deep .mat-button-focus-overlay {
+  display: none;
+}
+
+.filter-icon {
+  margin: auto;
+}
+  
+.mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -1,0 +1,53 @@
+@import "../../../../themes/pp-variables.base.scss";
+
+$label-color: #888888;
+
+.date-box-container {
+    position: relative;
+    max-width: 350px;
+    margin-bottom: 4px;
+}
+
+.date-box {
+    padding-top: 12px;
+}
+
+.date-box-label {
+    color: $label-color;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: Roboto;
+    letter-spacing: 1.5px;
+    padding-top: 22px;
+}
+
+.date-box-label,.dx-texteditor-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+::ng-deep .dx-datebox-calendar.dx-dropdowneditor .dx-dropdowneditor-icon::before,
+.dx-datebox-calendar.dx-dropdowneditor.dx-dropdowneditor-active
+  .dx-dropdowneditor-icon::before {
+  content: "";
+  font: 20px/20px DXIcons;
+  width: 20px;
+  height: 100%;
+  text-align: center;
+}
+
+// ::ng-deep .dx-popup-inherit-height .dx-popup-content > .dx-widget {
+//     height: 420px;
+// }
+
+.week-cell {
+    display: flex;
+    
+}
+
+.week-number {
+    color: $label-color;
+    font-size: 9px;
+    font-weight: 900;
+}

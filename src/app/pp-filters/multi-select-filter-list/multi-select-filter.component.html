@@ -1,0 +1,23 @@
+<mat-form-field class="main-container">
+    <mat-label>{{placeHolders}}...</mat-label>
+    <mat-select multiple 
+        placeholder="{{placeHolders}}..."  
+        [formControl]="filtersSelectionControl"
+        [matTooltip]="uiService.getTooltip(selectedFilters, defaultTooltip)"
+        matTooltipPosition="below" 
+        matTooltipClass="pp-tooltip">
+        <mat-select-trigger>
+            {{uiService.getSelectionText(selectedFilters)}}
+            <span *ngIf="filtersSelectionControl.value?.length > 2" class="multiple-selections">
+                {{uiService.getSelectionEllipsis(selectedFilters)}}
+            </span>
+        </mat-select-trigger>
+        <mat-option [value]="selectAllOption" (click)="selectAll()">
+            {{selectAllOption.filterItemName}}
+        </mat-option>
+        <mat-option [value]="clearAllOption" (click)="clearAll()">
+            {{clearAllOption.filterItemName}}
+        </mat-option>
+        <mat-option *ngFor="let filter of filtersList" [value]="filter" (click)="selectionChanged()">{{filter.filterItemName}}</mat-option>
+    </mat-select>
+</mat-form-field>

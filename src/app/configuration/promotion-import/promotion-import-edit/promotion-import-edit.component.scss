@@ -1,0 +1,23 @@
+::ng-deep .mat-dialog-container {
+    overflow: hidden;
+}
+
+mat-radio-button {
+    margin-bottom: 10px;
+}
+
+.blue {
+    color: #1991EB;
+    font-weight: 600;
+}
+
+.header {
+    padding: 15px 15px 0px 15px;
+    font-size: 16px;
+}
+
+.btn-blue {
+    background: #1991EB;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
